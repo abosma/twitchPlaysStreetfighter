@@ -22,6 +22,15 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="inputController.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IRCController.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="movesController.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="twitchPlaysStreetfighter.py" />
   </ItemGroup>
   <PropertyGroup>
