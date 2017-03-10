@@ -390,96 +390,112 @@ async def lk():
     ic.ReleaseKey(0x41);
 
 async def stringReader(moveString):
-    moveList = ["llhdk", "rlhdk",
-                "lmhdk", "rmhdk",
-                "lhhdk", "rhhdk",
-                "llshy", "rlshy",
-                "lmshy", "rmshy",
-                "lhshy", "rhshy",
-                "llsen", "rlsen",
-                "lmsen", "rmsen",
-                "lhsen", "rhsen",
-                "lsuper", "rsuper",
-                "lultra", "rultra",
-                "jl", "jr", "dl", "dr",
-                "throw", "taunt",
-                "focus", "lfadc",
-                "rfadc", "lk",
-                "mk", "hk", "lp",
-                "mp", "hp", "slp"]
     waitTime = 0;
-    match = re.search('slp[\d]{0,9}', moveString);
-
-    for move in moveList:
-        if move in moveString:
-            if match:
-                timeToWait = int(''.join(list(filter(str.isdigit, match.group(0)))));
-                waitTime = (timeToWait / 1000);
-            if move == "llhdk":
-                await llHadouken();
-            if move == "rlhdk":
-                await rlHadouken();
-            if move == "lmhdk":
-                await lmHadouken();
-            if move == "rmhdk":
-                await rmHadouken();
-            if move == "lhhdk":
-                await lhHadouken();
-            if move == "rhhdk":
-                await rhHadouken();
-            if move == "llshy":
-                await llShoryu();
-            if move == "rlshy":
-                await rlShoryu();
-            if move == "lmshy":
-                await lmShoryu();
-            if move == "rmshy":
-                await rmShoryu();
-            if move == "lhshy":
-                await lhShoryu();
-            if move == "rhshy":
-                await rhShoryu();
-            if move == "llsen":
-                await llSenp();
-            if move == "rlsen":
-                await rlSenp();
-            if move == "lmsen":
-                await lmSenp();
-            if move == "rmsen":
-                await rmSenp();
-            if move == "lhsen":
-                await lhSenp();
-            if move == "rhsen":
-                await rhSenp();
-            if move == "lsuper":
-                await lsuper();
-            if move == "lultra":
-                await lultra();
-            if move == "rsuper":
-                await rsuper();
-            if move == "rultra":
-                await rultra();
-            if move == "jl":
-                await jl();
-            if move == "jr":
-                await jr();
-            if move == "dl":
-                await dl();
-            if move == "dr":
-                await dr();
-            if move == "throw":
-                await throw();
-            if move == "focus":
-                await focus();
-            if move == "taunt":
-                await taunt();
-            if move == "lfadc":
-                await lfadc();
-            if move == "rfadc":
-                await rfadc();
-            if move == "help":
-                return("Commandlist here: http://pastebin.com/TH3PN3wK");
-            if move == "lk":
-                await lk();
-            time.sleep(waitTime);
+    builtString = "";
+    for chr in moveString:
+        builtString = builtString + chr;
+        match = re.search('^slp[0-9]{2}$', builtString);
+        if match:
+            timeToWait = int(''.join(list(filter(str.isdigit, match.group(0)))));
+            waitTime = (timeToWait / 1000);
+            builtString = "";
+        if builtString == "llhdk":
+            await llHadouken();
+            builtString = "";
+        if builtString == "rlhdk":
+            await rlHadouken();
+            builtString = "";
+        if builtString == "lmhdk":
+            await lmHadouken();
+            builtString = "";
+        if builtString == "rmhdk":
+            await rmHadouken();
+            builtString = "";
+        if builtString == "lhhdk":
+            await lhHadouken();
+            builtString = "";
+        if builtString == "rhhdk":
+            await rhHadouken();
+            builtString = "";
+        if builtString == "llshy":
+            await llShoryu();
+            builtString = "";
+        if builtString == "rlshy":
+            await rlShoryu();
+            builtString = "";
+        if builtString == "lmshy":
+            await lmShoryu();
+            builtString = "";
+        if builtString == "rmshy":
+            await rmShoryu();
+            builtString = "";
+        if builtString == "lhshy":
+            await lhShoryu();
+            builtString = "";
+        if builtString == "rhshy":
+            await rhShoryu();
+            builtString = "";
+        if builtString == "llsen":
+            await llSenp();
+            builtString = "";
+        if builtString == "rlsen":
+            await rlSenp();
+            builtString = "";
+        if builtString == "lmsen":
+            await lmSenp();
+            builtString = "";
+        if builtString == "rmsen":
+            await rmSenp();
+            builtString = "";
+        if builtString == "lhsen":
+            await lhSenp();
+            builtString = "";
+        if builtString == "rhsen":
+            await rhSenp();
+            builtString = "";
+        if builtString == "lsuper":
+            await lsuper();
+            builtString = "";
+        if builtString == "lultra":
+            await lultra();
+            builtString = "";
+        if builtString == "rsuper":
+            await rsuper();
+            builtString = "";
+        if builtString == "rultra":
+            await rultra();
+            builtString = "";
+        if builtString == "jl":
+            await jl();
+            builtString = "";
+        if builtString == "jr":
+            await jr();
+            builtString = "";
+        if builtString == "dl":
+            await dl();
+            builtString = "";
+        if builtString == "dr":
+            await dr();
+            builtString = "";
+        if builtString == "throw":
+            await throw();
+            builtString = "";
+        if builtString == "focus":
+            await focus();
+            builtString = "";
+        if builtString == "taunt":
+            await taunt();
+            builtString = "";
+        if builtString == "lfadc":
+            await lfadc();
+            builtString = "";
+        if builtString == "rfadc":
+            await rfadc();
+            builtString = "";
+        if builtString == "help":
+            return("Commandlist here: http://pastebin.com/TH3PN3wK");
+        if builtString == "lk":
+            await lk();
+            builtString = "";
+        time.sleep(waitTime);
     return("Done using moves");

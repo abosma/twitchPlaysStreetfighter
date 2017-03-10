@@ -10,6 +10,7 @@ class IRCController():
         self.NICK = "aetbosma"
         self.PASS = 'oauth:m6dceh4p3e46lfhdeavz1x2rxknh95'
         self.s = socket.socket();
+        self.paused = False;
 
     def send_message(self, message):
         self.s.send(bytes("PRIVMSG #" + self.NICK + " :" + message + "\r\n", "UTF-8"))
@@ -39,7 +40,20 @@ class IRCController():
                 print(username + ": " + message)
                 
                 try:
-                    self.send_message(await mc.stringReader(parts[2]));
+                    if not self.paused and username != "aetbosma":
+                        self.send_message(await mc.stringReader(parts[2]));
+                    elif not self.paused and username == "aetbosma":
+                        if message == "pause":
+                            self.paused = True;
+                        else:
+                            self.send_message(await mc.stringReader(parts[2]));
+                    elif self.paused and username != "aetbosma":
+                        self.send_message("Bot is currently paused");
+                    elif self.paused and username == "aetbosma":
+                        if message == "unpause":
+                            self.paused = False;
+                        else:
+                            self.send_message(await mc.stringReader(parts[2]));
                 except Exception as e:
                     pass
 
