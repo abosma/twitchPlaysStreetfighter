@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{862b5b0d-4b82-4e11-9907-35e4d01c51ea}</ProjectGuid>
+    <ProjectGuid>effac484-d02e-456c-97d9-ca7c9d682356</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>twitchPlaysStreetfighter.py</StartupFile>
     <SearchPath>
@@ -32,6 +32,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="twitchPlaysStreetfighter.py" />
+    <Compile Include="__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

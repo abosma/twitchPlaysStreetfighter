@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{862b5b0d-4b82-4e11-9907-35e4d01c51ea}</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>twitchPlaysStreetfighter.py</StartupFile>
+    <StartupFile>twitchPlaysStreetfighterp2.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -31,7 +31,10 @@
     <Compile Include="movesController.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="twitchPlaysStreetfighter.py" />
+    <Compile Include="twitchPlaysStreetfighterp2.py" />
+    <Compile Include="__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

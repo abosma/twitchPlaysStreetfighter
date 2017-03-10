@@ -1,6 +1,6 @@
 import socket, string, time
 import asyncio
-import movesController as mc
+import twitchPlaysStreetfighter.movesController as mc
 
 
 class IRCController():
@@ -58,5 +58,5 @@ class IRCController():
                     pass
 
     def startBot(self):
-        loop = asyncio.get_event_loop()
+        loop = asyncio.get_event_loop_policy().new_event_loop()
         loop.run_until_complete(self.bot())

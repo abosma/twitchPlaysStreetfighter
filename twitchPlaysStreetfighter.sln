@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "twitchPlaysStreetfighter", "twitchPlaysStreetfighter\twitchPlaysStreetfighter.pyproj", "{EFFAC484-D02E-456C-97D9-CA7C9D682356}"
-EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "twitchPlaysStreetfighterp2", "..\twitchPlaysStreetfighterp2\twitchPlaysStreetfighter\twitchPlaysStreetfighterp2.pyproj", "{862B5B0D-4B82-4E11-9907-35E4D01C51EA}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Main", "Main\Main.pyproj", "{F6A47ECA-4DBC-46DC-9E33-BF8029D66F2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,10 +11,8 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EFFAC484-D02E-456C-97D9-CA7C9D682356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EFFAC484-D02E-456C-97D9-CA7C9D682356}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{862B5B0D-4B82-4E11-9907-35E4D01C51EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{862B5B0D-4B82-4E11-9907-35E4D01C51EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6A47ECA-4DBC-46DC-9E33-BF8029D66F2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6A47ECA-4DBC-46DC-9E33-BF8029D66F2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

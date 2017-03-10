@@ -1,7 +1,7 @@
 import asyncio
 import time
 import re
-import inputController as ic
+import twitchPlaysStreetfighterp2.inputController as ic
 
 async def llHadouken():
     ic.PressKey(0x4B);
