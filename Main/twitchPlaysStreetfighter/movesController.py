@@ -385,9 +385,76 @@ async def rfadc():
     ic.ReleaseKey(0x58);
 
 async def lk():
-    ic.PressKey(0x41)
+    ic.PressKey(0x5A);
+    time.sleep(0.02);
+    ic.ReleaseKey(0x5A);
+
+async def mk():
+    ic.PressKey(0x58);
+    time.sleep(0.02);
+    ic.ReleaseKey(0x58);
+
+async def hk():
+    ic.PressKey(0x43);
+    time.sleep(0.02);
+    ic.ReleaseKey(0x43);
+
+async def lp():
+    ic.PressKey(0x41);
     time.sleep(0.02);
     ic.ReleaseKey(0x41);
+
+async def mp():
+    ic.PressKey(0x53);
+    time.sleep(0.02);
+    ic.ReleaseKey(0x53);
+
+async def hp():
+    ic.PressKey(0x44);
+    time.sleep(0.02);
+    ic.ReleaseKey(0x44);
+
+async def crlk():
+    ic.PressKey(0x28);
+    ic.PressKey(0x5A);
+    time.sleep(0.02);
+    ic.ReleaseKey(0x28);
+    ic.ReleaseKey(0x5A);
+
+async def crmk():
+    ic.PressKey(0x28);
+    ic.PressKey(0x58);
+    time.sleep(0.02);
+    ic.ReleaseKey(0x28);
+    ic.ReleaseKey(0x58);
+
+async def crhk():
+    ic.PressKey(0x28);
+    ic.PressKey(0x43);
+    time.sleep(0.02);
+    ic.ReleaseKey(0x28);
+    ic.ReleaseKey(0x43);
+
+async def crlp():
+    ic.PressKey(0x28);
+    ic.PressKey(0x41);
+    time.sleep(0.02);
+    ic.ReleaseKey(0x28);
+    ic.ReleaseKey(0x41);
+
+async def crmp():
+    ic.PressKey(0x28);
+    ic.PressKey(0x53);
+    time.sleep(0.02);
+    ic.ReleaseKey(0x28);
+    ic.ReleaseKey(0x53);
+
+async def crhp():
+    ic.PressKey(0x28);
+    ic.PressKey(0x44);
+    time.sleep(0.02);
+    ic.ReleaseKey(0x28);
+    ic.ReleaseKey(0x44);
 
 async def stringReader(moveString):
     waitTime = 0;
@@ -496,6 +563,39 @@ async def stringReader(moveString):
             return("Commandlist here: http://pastebin.com/TH3PN3wK");
         if builtString == "lk":
             await lk();
+            builtString = "";
+        if builtString == "mk":
+            await mk();
+            builtString = "";
+        if builtString == "hk":
+            await hk();
+            builtString = "";
+        if builtString == "lp":
+            await lp();
+            builtString = "";
+        if builtString == "mp":
+            await mp();
+            builtString = "";
+        if builtString == "hp":
+            await hp();
+            builtString = "";
+        if builtString == "crlk":
+            await crlk();
+            builtString = "";
+        if builtString == "crmk":
+            await crmk();
+            builtString = "";
+        if builtString == "crhk":
+            await crhk();
+            builtString = "";
+        if builtString == "crlp":
+            await crlp();
+            builtString = "";
+        if builtString == "crmp":
+            await crmp();
+            builtString = "";
+        if builtString == "crhp":
+            await crhp();
             builtString = "";
         time.sleep(waitTime);
     return("Done using moves");
